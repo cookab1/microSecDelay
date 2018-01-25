@@ -7,15 +7,17 @@
 
 #include <avr/io.h>
 
+int add2(int, int);
+
+volatile int result;
 
 int main(void)
 {
-	
-	DDRB = 0x80;
+	result = add2(7,8);
 	
     while (1) 
     {
-		PORTB ^= 0x80; 
+		
     }
 }
 
