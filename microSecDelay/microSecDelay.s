@@ -8,11 +8,19 @@
 
 		.text
 		.global add2
-		.global add8
+		.global delay_usec
+		.global delay
 add2:
 		add r24, r22
 		adc r25, r23
 		ret
 
-add8:
+delay_usec:
+		call delay
+		nop
+		nop
+		nop
+		ret
+
+delay:
 		ret
