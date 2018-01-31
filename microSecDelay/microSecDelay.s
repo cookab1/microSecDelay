@@ -16,11 +16,15 @@ add2:
 		ret
 
 delay_usec:
-		call delay
+		nop
+		nop
+		dec r24
+		brge L2
+L1:		dec r24
+		call L2
 		nop
 		nop
 		nop
-		ret
-
-delay:
-		ret
+		nop
+		brge	L1	
+L2:  	ret
